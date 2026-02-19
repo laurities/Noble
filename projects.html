@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects – Noble Arokiyaraj</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--navy:#0a1628;--navy-mid:#112240;--gold:#c9a84c;--gold-light:#e8c97a;--cream:#f5f0e8;--text:#d0c8b8;--text-muted:#8a8070;}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'DM Sans',sans-serif;background:var(--navy);color:var(--text);}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 4rem;background:rgba(10,22,40,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.15);}
+    .nav-logo{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--gold);text-decoration:none;}
+    .nav-links{display:flex;gap:2.5rem;list-style:none;}
+    .nav-links a{text-decoration:none;color:var(--text);font-size:0.85rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:500;transition:color 0.3s;}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold);}
+    .page-hero{padding:10rem 4rem 5rem;border-bottom:1px solid rgba(201,168,76,0.1);}
+    .section-tag{display:inline-flex;align-items:center;gap:0.7rem;font-size:0.82rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
+    .section-tag::before{content:'';width:40px;height:1px;background:var(--gold);}
+    h1{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,5vw,4.5rem);font-weight:900;color:var(--cream);}
+    .projects-grid{padding:5rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:1200px;margin:0 auto;}
+    .proj-card{background:var(--navy-mid);border:1px solid rgba(201,168,76,0.12);padding:2.5rem;position:relative;overflow:hidden;transition:border-color 0.3s,transform 0.3s;}
+    .proj-card:hover{border-color:rgba(201,168,76,0.4);transform:translateY(-4px);}
+    .proj-num{font-family:'Playfair Display',serif;font-size:4rem;font-weight:900;color:rgba(201,168,76,0.07);position:absolute;top:1rem;right:1.5rem;line-height:1;}
+    .proj-category{font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
+    .proj-title{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--cream);font-weight:700;margin-bottom:1rem;line-height:1.3;}
+    .proj-desc{font-size:0.9rem;color:var(--text-muted);line-height:1.75;margin-bottom:1.5rem;}
+    .proj-impact{margin-bottom:1.5rem;}
+    .impact-label{font-size:0.72rem;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.5rem;}
+    .impact-value{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--gold);font-weight:700;}
+    .proj-tags{display:flex;flex-wrap:wrap;gap:0.5rem;}
+    .proj-tag{background:rgba(201,168,76,0.07);border:1px solid rgba(201,168,76,0.18);padding:0.3rem 0.7rem;font-size:0.72rem;color:var(--text-muted);letter-spacing:0.5px;}
+    .proj-award{display:inline-flex;align-items:center;gap:0.4rem;background:rgba(201,168,76,0.12);border:1px solid var(--gold);padding:0.4rem 0.8rem;font-size:0.72rem;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:1rem;}
+    footer{text-align:center;padding:2rem;border-top:1px solid rgba(201,168,76,0.1);font-size:0.78rem;color:var(--text-muted);}
+    @media(max-width:900px){.projects-grid{grid-template-columns:1fr;padding:3rem 1.5rem;}.page-hero{padding:8rem 1.5rem 3rem;}nav{padding:1rem 1.5rem;}.nav-links{gap:1rem;}.nav-links a{font-size:0.75rem;}}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">Noble A.</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="projects.html" class="active">Projects</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+<div class="page-hero">
+  <div class="section-tag">Key Initiatives</div>
+  <h1>Projects &amp; Impact</h1>
+</div>
+<div class="projects-grid">
+
+  <div class="proj-card">
+    <div class="proj-num">01</div>
+    <div class="proj-category">Regulatory Compliance · Automation</div>
+    <div class="proj-award">★ Silver Star Award</div>
+    <div class="proj-title">RBI Email ID Validation Automation</div>
+    <div class="proj-desc">Spearheaded RBI-mandated automation of Email ID Validation across 4 core banking systems. Delivered a comprehensive solution approach note and achieved 100% regulatory compliance within strict deadlines, earning HDFC Bank's Silver Star recognition.</div>
+    <div class="proj-impact">
+      <div class="impact-label">Key Outcome</div>
+      <div class="impact-value">100% Compliance</div>
+    </div>
+    <div class="proj-tags">
+      <span class="proj-tag">RBI Regulations</span>
+      <span class="proj-tag">Process Automation</span>
+      <span class="proj-tag">BRD / FRD</span>
+      <span class="proj-tag">UAT</span>
+      <span class="proj-tag">SDLC</span>
+    </div>
+  </div>
+
+  <div class="proj-card">
+    <div class="proj-num">02</div>
+    <div class="proj-category">Process Automation · Efficiency</div>
+    <div class="proj-title">FD Lien Journey Automation</div>
+    <div class="proj-desc">Engineered an end-to-end Fixed Deposit Lien automation workflow incorporating Maker/Checker controls. The solution dramatically reduced manual validation time from 7 hours to just 10 minutes while minimizing operational risk across credit card processing.</div>
+    <div class="proj-impact">
+      <div class="impact-label">Time Savings</div>
+      <div class="impact-value">97% Reduction</div>
+    </div>
+    <div class="proj-tags">
+      <span class="proj-tag">Workflow Automation</span>
+      <span class="proj-tag">Risk Management</span>
+      <span class="proj-tag">Maker/Checker Controls</span>
+      <span class="proj-tag">Agile</span>
+    </div>
+  </div>
+
+  <div class="proj-card">
+    <div class="proj-num">03</div>
+    <div class="proj-category">API Integration · Vendor Management</div>
+    <div class="proj-title">Smartpay BillDesk Settlement Integration</div>
+    <div class="proj-desc">Managed end-to-end vendor integration of BillDesk APIs into the Bank's API Gateway for Smartpay Settlement. Designed and documented RESTful API workflows that reduced the settlement cycle time from 6 hours to 30 minutes, significantly improving operational throughput.</div>
+    <div class="proj-impact">
+      <div class="impact-label">Cycle Time Improvement</div>
+      <div class="impact-value">6 hrs → 30 min</div>
+    </div>
+    <div class="proj-tags">
+      <span class="proj-tag">REST APIs</span>
+      <span class="proj-tag">API Gateway</span>
+      <span class="proj-tag">Postman</span>
+      <span class="proj-tag">Swagger</span>
+      <span class="proj-tag">Payment Systems</span>
+    </div>
+  </div>
+
+  <div class="proj-card">
+    <div class="proj-num">04</div>
+    <div class="proj-category">Cost Optimization · Application Development</div>
+    <div class="proj-title">Loan Booking &amp; Cancellation Application</div>
+    <div class="proj-desc">Developed a custom application to bridge critical gaps in the V+ Core banking system for loan booking and cancellation. The intelligent automation solution eliminated manual overhead and generated substantial recurring cost savings for the bank.</div>
+    <div class="proj-impact">
+      <div class="impact-label">Monthly Cost Savings</div>
+      <div class="impact-value">₹3.5 Lakhs</div>
+    </div>
+    <div class="proj-tags">
+      <span class="proj-tag">Core Banking</span>
+      <span class="proj-tag">Gap Analysis</span>
+      <span class="proj-tag">Process Design</span>
+      <span class="proj-tag">UAT Leadership</span>
+    </div>
+  </div>
+
+  <div class="proj-card">
+    <div class="proj-num">05</div>
+    <div class="proj-category">Data Analytics · Reconciliation</div>
+    <div class="proj-title">Reconciliation Accuracy Enhancement</div>
+    <div class="proj-desc">Systematically improved reconciliation accuracy from baseline to 95% by implementing E2FA and Axiom tools for onboarding and settlement processes. Developed data mapping frameworks and reconciliation logic to eliminate discrepancies across card lifecycle operations.</div>
+    <div class="proj-impact">
+      <div class="impact-label">Accuracy Improvement</div>
+      <div class="impact-value">95%</div>
+    </div>
+    <div class="proj-tags">
+      <span class="proj-tag">E2FA</span>
+      <span class="proj-tag">Axiom</span>
+      <span class="proj-tag">SQL</span>
+      <span class="proj-tag">Data Mapping</span>
+      <span class="proj-tag">Data Reconciliation</span>
+    </div>
+  </div>
+
+  <div class="proj-card">
+    <div class="proj-num">06</div>
+    <div class="proj-category">Digital Transformation · Agile</div>
+    <div class="proj-title">Credit Card Automation – End-to-End SDLC</div>
+    <div class="proj-desc">Led comprehensive business analysis for the Credit Card Automation project across the full SDLC. Coordinated cross-functional teams across Operations, IT, and Compliance to streamline manual card lifecycle workflows into automated API-driven solutions, improving accuracy and turnaround time.</div>
+    <div class="proj-impact">
+      <div class="impact-label">Scope</div>
+      <div class="impact-value">Full SDLC</div>
+    </div>
+    <div class="proj-tags">
+      <span class="proj-tag">Credit Card Systems</span>
+      <span class="proj-tag">JIRA</span>
+      <span class="proj-tag">Confluence</span>
+      <span class="proj-tag">Agile/SCRUM</span>
+      <span class="proj-tag">Stakeholder Mgmt</span>
+    </div>
+  </div>
+
+</div>
+<footer>© 2024 Noble Arokiyaraj Devanbu &nbsp;·&nbsp; Chennai, Tamil Nadu, India</footer>
+</body>
+</html>
