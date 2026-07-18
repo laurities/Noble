@@ -1,116 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Noble Arokiyaraj Devanbu — Business Analyst</title>
-<meta name="description" content="Business Analyst specialising in digital banking automation, regulatory compliance and Agile delivery. Portfolio of Noble Arokiyaraj Devanbu.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Noble Arokiyaraj – Business Analyst</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --navy: #0a1628;
+      --navy-mid: #112240;
+      --gold: #c9a84c;
+      --gold-light: #e8c97a;
+      --cream: #f5f0e8;
+      --text: #d0c8b8;
+      --text-muted: #8a8070;
+      --mono: 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--navy); color: var(--text); min-height: 100vh; }
+
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.2rem 4rem;
+      background: rgba(10,22,40,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201,168,76,0.15);
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700;
+      color: var(--gold); text-decoration: none; letter-spacing: 1px;
+    }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a {
+      text-decoration: none; color: var(--text);
+      font-size: 0.85rem; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 500;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+
+    .hero {
+      min-height: 100vh; display: flex; align-items: center;
+      padding: 0 4rem; position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; top: -20%; right: -10%;
+      width: 700px; height: 700px;
+      background: radial-gradient(ellipse, rgba(201,168,76,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-content { max-width: 800px; animation: fadeUp 1s ease both; }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 0.7rem;
+      font-size: 0.82rem; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1.8rem;
+    }
+    .hero-tag::before { content: ''; width: 40px; height: 1px; background: var(--gold); }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 900; line-height: 1.05;
+      color: var(--cream); margin-bottom: 1.2rem;
+    }
+    h1 span { color: var(--gold); }
+    .hero-subtitle {
+      font-size: 1.1rem; color: var(--text-muted);
+      max-width: 580px; line-height: 1.75; margin-bottom: 2.8rem;
+    }
+    .hero-stats { display: flex; gap: 3rem; margin-bottom: 3rem; }
+    .stat-num {
+      font-family: var(--mono); font-size: 2.1rem; font-weight: 600;
+      font-variant-numeric: tabular-nums; letter-spacing: -0.02em;
+      color: var(--gold); display: block;
+    }
+    .stat-label { font-size: 0.75rem; letter-spacing: 1px; color: var(--text-muted); text-transform: uppercase; }
+    .hero-btns { display: flex; gap: 1.2rem; }
+    .btn {
+      padding: 0.85rem 2.2rem; font-size: 0.85rem; letter-spacing: 1.5px; text-transform: uppercase;
+      font-weight: 500; text-decoration: none; transition: all 0.3s; border: none; cursor: pointer;
+    }
+    .btn-gold { background: var(--gold); color: var(--navy); }
+    .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .btn-outline { border: 1px solid rgba(201,168,76,0.4); color: var(--gold); background: transparent; }
+    .btn-outline:hover { border-color: var(--gold); background: rgba(201,168,76,0.07); transform: translateY(-2px); }
+
+    .hero-deco {
+      position: absolute; right: 4rem; top: 50%; transform: translateY(-50%);
+      font-family: 'Playfair Display', serif; font-size: 14rem; font-weight: 900;
+      color: rgba(201,168,76,0.04); line-height: 1; user-select: none; pointer-events: none;
+    }
+    .award-badge {
+      position: absolute; right: 5rem; bottom: 5rem;
+      width: 130px; height: 130px; border-radius: 50%;
+      border: 1px solid rgba(201,168,76,0.3);
+      display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+      animation: spin 25s linear infinite;
+    }
+    .award-badge-inner { font-size: 0.62rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); line-height: 1.6; }
+    .award-star { font-size: 1.5rem; margin-bottom: 0.2rem; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+    footer { text-align: center; padding: 2rem; border-top: 1px solid rgba(201,168,76,0.1); font-size: 0.78rem; color: var(--text-muted); }
+
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { gap: 1rem; }
+      .nav-links a { font-size: 0.75rem; }
+      .hero { padding: 8rem 1.5rem 4rem; }
+      .hero-deco, .award-badge { display: none; }
+      .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
+    }
+  </style>
 </head>
 <body>
+<nav>
+  <a href="index.html" class="nav-logo">Noble A.</a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
-<header class="site-header">
-  <div class="nav-inner">
-    <a href="index.html" class="brand">Noble <em>A.</em></a>
-    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<main>
-  <section class="hero">
-    <div class="wrap">
-      <div class="eyebrow">Business Analyst · Digital Banking</div>
-      <h1>I turn seven-hour processes into ten-minute ones.</h1>
-      <p class="role-line">Deputy Manager – Business Analyst at <strong>HDFC Bank</strong>, with three years spent
-        translating regulatory mandates and clunky manual workflows into automated, audit-ready systems —
-        documented in SQL, Power BI and API-integration work across CASA, Fixed Deposit and card journeys.</p>
-      <div class="hero-actions">
-        <a href="projects.html" class="btn btn-primary">View case studies</a>
-        <a href="contact.html" class="btn btn-ghost">Get in touch</a>
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-tag">Business Analyst · Fintech · Digital Banking</div>
+    <h1>Noble<br/><span>Arokiyaraj</span></h1>
+    <p class="hero-subtitle">Deputy Manager – Business Analyst at HDFC Bank, Chennai. Translating complex business challenges into scalable digital solutions with 3+ years (3 yrs 3 mos) of fintech expertise.</p>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-num">97%</span>
+        <span class="stat-label">Efficiency Gain</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">₹3.5L</span>
+        <span class="stat-label">Monthly Savings</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">100%</span>
+        <span class="stat-label">RBI Compliance</span>
       </div>
     </div>
-  </section>
-
-  <div class="ledger">
-    <div class="ledger-inner">
-      <div class="ledger-row">
-        <div class="ledger-label">CASA &amp; FD lien release</div>
-        <div class="ledger-from">7 hrs, manual</div>
-        <div class="ledger-arrow">&rarr;</div>
-        <div class="ledger-to">&lt; 10 min, automated</div>
-        <div class="ledger-result">97% faster</div>
-      </div>
-      <div class="ledger-row">
-        <div class="ledger-label">Smartpay settlement cycle</div>
-        <div class="ledger-from">6 hrs</div>
-        <div class="ledger-arrow">&rarr;</div>
-        <div class="ledger-to">30 min</div>
-        <div class="ledger-result">92% faster</div>
-      </div>
-      <div class="ledger-row">
-        <div class="ledger-label">RBI email-ID validation</div>
-        <div class="ledger-from">Manual, ambiguous</div>
-        <div class="ledger-arrow">&rarr;</div>
-        <div class="ledger-to">100% compliant, 4 systems</div>
-        <div class="ledger-result">Silver Star Award</div>
-      </div>
-      <div class="ledger-row">
-        <div class="ledger-label">BillDesk vendor API go-live</div>
-        <div class="ledger-from">18 open defects</div>
-        <div class="ledger-arrow">&rarr;</div>
-        <div class="ledger-to">Resolved pre-launch</div>
-        <div class="ledger-result">45% less manual work</div>
-      </div>
+    <div class="hero-btns">
+      <a href="projects.html" class="btn btn-gold">View Projects</a>
+      <a href="contact.html" class="btn btn-outline">Get In Touch</a>
     </div>
   </div>
-
-  <section>
-    <div class="wrap">
-      <div class="eyebrow">What I bring</div>
-      <h2 class="section-title">Requirements to reconciliation, in one thread</h2>
-      <div class="grid-3">
-        <div class="panel">
-          <h3 style="font-family:var(--font-display); font-size:1.2rem; margin:0 0 12px;">Requirements &amp; documentation</h3>
-          <p style="color:var(--parchment-dim); margin:0;">BRD/FRD/FSD authorship, user stories and acceptance
-            criteria that hold up under audit — written to close ambiguity before it reaches development.</p>
-        </div>
-        <div class="panel">
-          <h3 style="font-family:var(--font-display); font-size:1.2rem; margin:0 0 12px;">Data &amp; integration</h3>
-          <p style="color:var(--parchment-dim); margin:0;">SQL and Power BI for decision-ready reporting, and
-            hands-on REST API integration testing with Postman and Swagger ahead of go-live.</p>
-        </div>
-        <div class="panel">
-          <h3 style="font-family:var(--font-display); font-size:1.2rem; margin:0 0 12px;">Governance &amp; delivery</h3>
-          <p style="color:var(--parchment-dim); margin:0;">Agile/Scrum delivery inside regulated environments —
-            RBI mandates, DPIA, TPRM and audit cycles — without slowing the sprint down.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div class="wrap footer-inner">
-    <p>&copy; 2026 Noble Arokiyaraj Devanbu</p>
-    <div class="footer-links">
-      <a href="mailto:noblelaurities@gmail.com">Email</a>
-      <a href="contact.html">Contact</a>
+  <div class="hero-deco">BA</div>
+  <div class="award-badge">
+    <div class="award-badge-inner">
+      <div class="award-star">★</div>
+      Silver Star<br/>Award<br/>HDFC Bank
     </div>
   </div>
-</footer>
+</section>
 
-<script src="script.js"></script>
+<footer>© 2024 Noble Arokiyaraj Devanbu &nbsp;·&nbsp; Chennai, Tamil Nadu, India</footer>
 </body>
 </html>
